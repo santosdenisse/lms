@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block messages %}{% include 'messages.html' %}{% endblock %}
+
+{% block header %}Welcome!{% endblock %}
+
+{% block filter %}
+  <div class="center">
+      <p>Django-LMS is a learning testing system, aiming to provide both ease 
+        of access and the ability to test one's knowledge.</p>
+      <p>In order to use the system please sign up or log in.</p>
+  </div>
+{% endblock %}
+
+{% block form_action %}{% url 'home' %}{% endblock %}
+
+{% block button %}
+    <button class="btn btn-primary" id="submit" type="submit">Log in</button>
+    <a class="btn btn-info" id="signup" href="{% url 'signup' %}">Sign up</a>
+{% endblock %}
